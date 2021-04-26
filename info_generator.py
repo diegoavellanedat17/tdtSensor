@@ -4,6 +4,8 @@ from time import sleep
 import datetime
 import config
 
+# Crear el archivo de config con las credenciales del Broker para replicar las pruebas 
+
 def on_connect(client, userdata, flags, rc):
     print("Connected with result code" + str(rc))
     topic=config.topic
@@ -24,14 +26,10 @@ def on_message(client, userdata, message):
         format=str(now.hour)+':'+str(now.minute)+':'+str(now.second)
         print(format)
         f = open("aire.csv",'a')  # write in text mode
-        f.write(format +","+pay)
+        f.write(format +","+payload+"\n")
         f.close()
     except:
         print('no se guarda por que no es un int ')
-
-    
-
-
 
 def on_publish(client, obj, mid):
     print("mid: " + str(mid))
