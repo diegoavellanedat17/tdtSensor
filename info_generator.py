@@ -25,7 +25,7 @@ def on_message(client, userdata, message):
         now= datetime.datetime.now()
         format=str(now.hour)+':'+str(now.minute)+':'+str(now.second)
         print(format)
-        f = open("aire.csv",'a')  # write in text mode
+        f = open("Tierra_0_.csv",'a')  # write in text mode
         f.write(format +","+payload+"\n")
         f.close()
     except:
