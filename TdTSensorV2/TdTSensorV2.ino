@@ -64,13 +64,8 @@ void setup() {
     //WiFiManager, Local intialization. Once its business is done, there is no need to keep it around
     WiFiManager wm;
 
-    //reset settings - wipe credentials for testing
-    //wm.resetSettings();
+ 
 
-    // Automatically connect using saved credentials,
-    // if connection fails, it starts an access point with the specified name ( "AutoConnectAP"),
-    // if empty will auto generate SSID, if password is blank it will be anonymous AP (wm.autoConnect())
-    // then goes into a blocking loop awaiting configuration and will return success result
 
     bool res;
     // res = wm.autoConnect(); // auto generated AP name from chipid
@@ -94,15 +89,7 @@ void setup() {
 }
 
 void loop() {
-//  client.loop();
-//  
-//  
-//  if (!client.connected()) {
-//    trys=0;
-//    digitalWrite(LED,HIGH);
-//    reconnect(trys);
-//  }
-//  Serial.println("Fuera del coso");
+
 
   if (!client.connected()) {
     reconnect();
@@ -119,9 +106,7 @@ void loop() {
         if (inChar == '\n') {
         Serial.print("Value:");
         Serial.println(inString.toInt());
-        //client.add(ID_1,inString.toInt());
-        //client.add("humedad",inString.toInt());
-        //client.sendAll(true);
+
         int str_len = inString.length() + 1; 
         char char_array[str_len];
         inString.toCharArray(char_array, str_len);
