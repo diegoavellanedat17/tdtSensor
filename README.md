@@ -12,6 +12,17 @@ Las siguientes son las dimensiones reales de la microcinta.
 ## Pruebas 
 
 En principio se toman los datos de la microcinta en el aire y posteriormente se empezarán a generar los archivos proporcionales a la cantidad de agua ingresada.
+La cantidad de Tierra es 569.9 g. 
+
+| Condición | Cantidad Agua (ml) | Archivo Generado |
+| ----- | ---- | ---- |
+| Aire | 0 | aire.csv |
+| Tierra Seca | 0 | Tierra_0_.csv |
+| 5 % | 28.5 | Tierra_5_.csv |
+| 10 % | 56.9 | Tierra_10_.csv |
+| 20 % | 114 | Tierra_20_.csv |
+
+
 
 
 
